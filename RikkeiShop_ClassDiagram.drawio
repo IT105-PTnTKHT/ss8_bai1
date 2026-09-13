@@ -1,0 +1,53 @@
+<mxfile host="app.diagrams.net" modified="2026-09-13T00:00:00.000Z" agent="Claude" version="24.0.0" type="device">
+  <diagram name="ClassDiagram-RikkeiShop" id="rikkeishop-cd">
+    <mxGraphModel dx="900" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="650" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Customer class -->
+        <mxCell id="customer" value="Customer" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=1;resizeParent=0;resizeParentMax=0;collapsible=0;swimlaneFillColor=#ffffff;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="80" y="120" width="260" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="c-attrs" value="- customerId: String&#10;- fullName: String&#10;- phoneNumber: String" style="text;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="customer">
+          <mxGeometry y="30" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c-line" value="" style="line;strokeWidth=1;" vertex="1" parent="customer">
+          <mxGeometry y="90" width="260" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="c-methods" value="+ placeOrder(): void" style="text;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="customer">
+          <mxGeometry y="98" width="260" height="52" as="geometry" />
+        </mxCell>
+
+        <!-- Order class -->
+        <mxCell id="order" value="Order" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=1;resizeParent=0;resizeParentMax=0;collapsible=0;swimlaneFillColor=#ffffff;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="500" y="120" width="260" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="o-attrs" value="- orderId: String&#10;- orderDate: Date&#10;- totalAmount: double" style="text;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="order">
+          <mxGeometry y="30" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="o-line" value="" style="line;strokeWidth=1;" vertex="1" parent="order">
+          <mxGeometry y="90" width="260" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="o-methods" value="+ calculateTotal(): double" style="text;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;fontSize=12;whiteSpace=wrap;html=1;" vertex="1" parent="order">
+          <mxGeometry y="98" width="260" height="52" as="geometry" />
+        </mxCell>
+
+        <!-- Association -->
+        <mxCell id="assoc" value="" style="edgeStyle=none;rounded=0;html=1;endArrow=none;startArrow=none;fontSize=12;" edge="1" parent="1" source="customer" target="order">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="195" as="sourcePoint" />
+            <mxPoint x="500" y="195" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mult-1" value="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="355" y="180" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="mult-n" value="*" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="465" y="180" width="20" height="20" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
